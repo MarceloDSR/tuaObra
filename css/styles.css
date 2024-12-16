@@ -1,0 +1,428 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E9E4BB;
+    color: #333;
+}
+
+
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    background-color: #F5DD54;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+}
+
+.header .logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+
+section {
+    margin-top: 100px; 
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+p {
+    margin: 10px 0;
+}
+
+#btnDoar{
+    background-color: #1A1C27;
+    color: #A89907;
+}
+
+#btnReceber{
+    margin-top: 5%;
+    background-color: #1A1C27;
+    color: #A89907;
+}
+#botao-login{
+    margin-top: 7%;
+}
+button {
+    background-color: #333;
+    color: #A89907; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 48%;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; 
+    background-color: #F5DD54;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #666;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+footer p {
+    margin: 0;
+}
+
+.welcome-section,
+.materials-section,
+.carousel-section {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+.materials-list{
+    list-style: none;
+}
+
+.welcome-section button,
+.btn-cancelar,
+.btn-enviar {
+    background-color: #1A1C27;
+    color: #A89907;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+.indicators .circle,
+.carousel-indicators .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 5px;
+}
+
+.circle.active {
+    background-color: #333;
+}
+
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+
+.cadastro-section {
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.cadastro-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.cadastro-form input,
+.cadastro-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.cadastro-form textarea {
+    resize: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-cancelar,
+.btn-enviar {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background-color: #1A1C27;
+    color: #fff;
+}
+
+.btn-enviar {
+    background-color: #A89907;
+    color: #1A1C27;
+}
+
+.carousel-item {
+    min-width: 250px;
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+@media screen and  (max-width:414px){
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #E9E4BB;
+        color: #565A5B;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .header {
+        text-align: center;
+        background-color: #F5DD54;
+        height: 5%;
+    }
+
+    .header .logo {
+        width: 60px;
+        height: auto;
+    }
+    
+    .header h1 {
+        margin: 5px 0;
+        font-size: 1.5rem;
+        color: #565A5B;
+    }
+    
+    .header p {
+        font-size: 0.9rem;
+        color: #565A5B;
+    }
+    
+    .quem-somos {
+        background-color: #e9e4bb;
+        text-align: center;
+    }
+    
+    .quem-somos h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #565A5B;
+    }
+    
+    .quem-somos p {
+        font-size: 1.2em;
+        max-width: 800px;
+        color: #565A5B;
+        
+    }
+    
+    
+    .inscricao {
+        padding: 40px 20px;
+        text-align: center;
+        background-color: #e9e4bb;
+    }
+    
+    .inscricao h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+    
+    .inscricao p {
+        font-size: 1.2em;
+    }
+    
+    .btn-inscrever {
+        border-radius: 30px;
+        margin-bottom: 100%;
+        background-color: #1A1C27;
+        color: #A89907;
+        
+    }
+    #btnCadastro{
+        border-radius: 30px;
+        margin-bottom: 100%;
+        background-color: #1A1C27;
+        color: #A89907;
+    }
+    .logo{
+        width: 40%;
+        height: 40%;
+    }
+    .inscricao p {
+        font-size: 1.2em;
+    }
+    
+    .btn-inscrever {
+        border-radius: 30px;
+        margin-bottom: 100%;
+        background-color: #1A1C27;
+        color: #A89907;
+    }
+    .logo{
+        width: 40%;
+        height: 40%;
+    }
+    .bemVindo{
+        position: absolute;
+        top: 85%;
+        left: 5%;
+        font-size: 25px;
+    }
+    .bemVindo p{
+        position: absolute;
+        top: 120%;
+        left: 100%;
+    }
+
+    .footer{
+        font-size: 10px;
+        position: absolute;
+        left: 5%;
+        top: 200%;
+    }
+    #btnDoar{
+        position: absolute;
+        border-radius: 30px;
+        margin-bottom: 100%;
+        background-color: #1A1C27;
+        color: #A89907;
+        top: 95%;
+        left: 25%;
+        width: 50%;
+
+    }
+
+    #btnReceber{
+        position: absolute;
+        border-radius: 30px;
+        margin-bottom: 100%;
+        background-color: #1A1C27;
+        color: #A89907;
+        top: 165%;
+        left: 25%;
+        width: 50%;
+    }
+
+    #h1BemVindo{
+        position: absolute;
+        top: 70%;
+        left: 30%;
+    }
+
+    #LogoBV{
+        position: absolute;
+        top: 130%;
+        left: 25%;
+
+    }
+
+    #LogoBV p{
+        position: absolute;
+        top: 125%;
+        left: 5%;
+        font-size: large;
+        font-family: Arial, sans-serif;
+        color: #565A5B;
+
+    }
+
+    
+
+}
