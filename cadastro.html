@@ -14,35 +14,69 @@
             <p>O que sobra, vira obra!</p>
         </header>
         <main class="content">
-            <form>
+            <form id="formCadastro">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail">
+                <input type="email" id="email" placeholder="Digite seu e-mail" required>
 
                 <label for="senha">Senha</label>
-                <input type="password" id="senha" placeholder="Digite sua senha">
+                <input type="password" id="senha" placeholder="Digite sua senha" required>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" placeholder="Digite seu nome">
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
 
                 <label for="sobrenome">Sobrenome</label>
-                <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+                <input type="text" id="sobrenome" placeholder="Digite seu sobrenome" required>
 
                 <label for="endereco">Endereço</label>
-                <input type="text" id="endereco" placeholder="Digite seu endereço">
+                <input type="text" id="endereco" placeholder="Digite seu endereço" required>
 
                 <label for="bairro">Bairro</label>
-                <input type="text" id="bairro" placeholder="Digite seu bairro">
+                <input type="text" id="bairro" placeholder="Digite seu bairro" required>
 
                 <label for="cep">CEP</label>
-                <input type="text" id="cep" placeholder="Digite seu CEP">
-            </form>
-            <a href="./bemVindo.html">
+                <input type="text" id="cep" placeholder="Digite seu CEP" required>
+                
                 <button type="submit" class="button" id="btnCadastro">Cadastrar</button>
-            </a>
+            </form>
         </main>
         <footer id="footer-cadastro">
             <p>Todos os direitos reservados, 2024</p>
         </footer>
     </section>
+
+    <script>
+        
+        document.getElementById('formCadastro').addEventListener('submit', async (e) => {
+            e.preventDefault();  
+
+            
+            const data = {
+                email: document.getElementById('email').value,
+                senha: document.getElementById('senha').value,
+                nome: document.getElementById('nome').value,
+                sobrenome: document.getElementById('sobrenome').value,
+                endereco: document.getElementById('endereco').value,
+                bairro: document.getElementById('bairro').value,
+                cep: document.getElementById('cep').value,
+            };
+
+            
+            const response = await fetch('http://localhost:3000/cadastrar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            
+            if (response.ok) {
+                alert('Cadastro realizado com sucesso!');
+                window.location.href = './bemVindo.html';  
+            } else {
+                alert('Erro ao cadastrar. Tente novamente.');
+            }
+        });
+    </script>
 </body>
 </html>

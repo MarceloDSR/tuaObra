@@ -1,0 +1,20 @@
+[
+    {
+        "email": "usuario1@example.com",
+        "senha": "senha123",
+        "nome": "João",
+        "sobrenome": "Silva",
+        "endereco": "Rua Exemplo, 123",
+        "bairro": "Centro",
+        "cep": "12345-678"
+    },
+    {
+        "email": "usuario2@example.com",
+        "senha": "senha456",
+        "nome": "Maria",
+        "sobrenome": "Souza",
+        "endereco": "Avenida Exemplo, 456",
+        "bairro": "Jardim",
+        "cep": "98765-432"
+    }
+]
